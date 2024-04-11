@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOW PASSWORD TASK</title>
+</head>
+<style>
+    .fm {
+        width: 500px;
+        height: 250px;
+        margin: auto;
+        margin-top: 250px;
+        font-size: xx-large;
+        border: 5px solid red;
+        padding: 50px;
+    }
+
+    input {
+        height: max-content;
+        width: 300px;
+        font-size: larger;
+        margin: auto;
+    }
+
+    input.check {
+        width: 25px;
+        height: 25px;
+    }
+</style>
+
+<body>
+    <form class="fm">
+        <label for=""> Password = </label>
+        <input type="password" value="" id="Pasword">
+        <br> <br>
+        <input type="checkbox" onclick="ShowPass()" class="check"> Show Password :
+    </form>
+    <script>
+        function ShowPass() {
+            let pass = document.getElementById("Pasword");
+            if (pass.type === "password") {
+                pass.type = "text";
+            }
+            else {
+                pass.type = "password";
+            }
+        } 
+    </script>
+</body>
+
+</html>

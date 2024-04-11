@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maths Operation</title>
+</head>
+<style>
+    .box {
+        height: 500px;
+        width: max-content;
+        padding: 25px;
+        border: 2px solid black;
+        margin: auto;
+        text-align: center;
+        font-size: xx-large;
+    }
+
+    input {
+        height: 40px;
+        width: 500px;
+        font-size: 25px;
+    }
+
+    button {
+        height: 60px;
+        width: 60px;
+        margin-top: 35px;
+        background-color: bisque;
+        color: brown;
+        font-size: xx-large;
+    }
+
+    #NetTotal {
+        font-size: xx-large;
+    }
+</style>
+
+<body>
+    <div class="box">
+        <h1>Maths Operation</h1>
+        <div>
+            <span> Enter 1st number :-</span>
+            <input type="" id="num1">
+        </div>
+        <br>
+        <div>
+            <span> Enter 2st number :-</span>
+            <input type="" id="num2">
+        </div>
+        <button onclick="plus()"> + </button>
+        <button onclick="mines()"> - </button>
+        <button onclick="multiple()"> * </button>
+        <button onclick="Divide()"> / </button>
+        <button onclick="modual()"> % </button>
+        <p>
+            <b> Answer is : </b> <span id="NetTotal" style="color: blue;"></span>
+        </p>
+    </div>
+
+    <script>
+        function plus() {
+            let number_1 = document.getElementById('num1').value;
+            let number_2 = document.getElementById('num2').value;
+            let final_ans = Number(number_1) + Number(number_2);
+            document.getElementById('NetTotal').innerHTML = final_ans;
+        }
+        function mines() {
+            let number_1 = document.getElementById('num1').value;
+            let number_2 = document.getElementById('num2').value;
+            let final_ans = Number(number_1) - Number(number_2);
+            document.getElementById('NetTotal').innerHTML = final_ans;
+        }
+        function multiple() {
+            let number_1 = document.getElementById('num1').value;
+            let number_2 = document.getElementById('num2').value;
+            let final_ans = Number(number_1) * Number(number_2);
+            document.getElementById('NetTotal').innerHTML = final_ans;
+        }
+        function Divide() {
+            let number_1 = document.getElementById('num1').value;
+            let number_2 = document.getElementById('num2').value;
+            let final_ans = Number(number_1) / Number(number_2);
+            document.getElementById('NetTotal').innerHTML = final_ans;
+        }
+        function modual() {
+            let number_1 = document.getElementById('num1').value;
+            let number_2 = document.getElementById('num2').value;
+            let final_ans = Number(number_1) % Number(number_2);
+            document.getElementById('NetTotal').innerHTML = final_ans;
+        }
+    </script>
+</body>
+
+</html>

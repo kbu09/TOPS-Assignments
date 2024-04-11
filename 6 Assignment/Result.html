@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocumMarkSheet for Information Technologyent</title>
+</head>
+<style>
+    .box {
+        height: max-content;
+        width: max-content;
+        border: 2px solid red;
+        padding: 10px;
+        margin: auto;
+    }
+
+    input {
+        font-size: large;
+        height: 25px;
+        width: 270px;
+    }
+
+    button {
+        height: 35px;
+        width: max-content;
+        background-color: burlywood;
+        font-size: large;
+    }
+
+    b,
+    span,
+    td,
+    th {
+        font-size: x-large;
+    }
+</style>
+
+<body>
+    <div class="box">
+        <center>
+            <h1>MarkSheet for Information Technology</h1>
+            <h2>Enter Marks</h2>
+        </center>
+        <table cellspacing="19" cellpadding="5" align="center">
+            <tr>
+                <td class="sub">C Language</td>
+                <td class="mark"> <input type="number" id="C"></td>
+            </tr>
+            <tr>
+                <td>C++ Language</td>
+                <td> <input type="number" id="C++"></td>
+            </tr>
+            <tr>
+                <td>Data Base</td>
+                <td> <input type="number" id="Data"></td>
+            </tr>
+            <tr>
+                <td>HTML</td>
+                <td> <input type="" id="Html"> </td>
+            </tr>
+            <tr>
+                <td>CSS</td>
+                <td> <input type="number" id="CSS"> </td>
+            </tr>
+            <tr>
+                <td>PHP</td>
+                <td> <input type="number" id="PHP"> </td>
+            </tr>
+            <tr>
+                <td>Core JAVA</td>
+                <td> <input type="number" id="JAVA"> </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td> <button onclick="Net_total()"> Result </button></td>
+            </tr>
+        </table>
+        <table cellspacing="5" cellpadding="2" align="center">
+            <tr>
+                <th><b> Total is = </b></th>
+                <th> <b id="Sum_total" style="color: blue;"></b> /350</th>
+            </tr>
+            <tr>
+                <th> <b> Percentage is =</b></th>
+                <th> <b id="Percentages" style="color: blue;"></b></th>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function Net_total() {
+            let C_lang = document.getElementById('C').value;
+            let C1_lang = document.getElementById('C++').value;
+            let Data = document.getElementById('Data').value;
+            let Html = document.getElementById('Html').value;
+            let CSS = document.getElementById('CSS').value;
+            let PHP = document.getElementById('PHP').value;
+            let JAVA = document.getElementById('JAVA').value;
+            let Total_sum = Number(C_lang) + Number(C1_lang) + Number(Data) + Number(Html) + Number(CSS) + Number(PHP) + Number(JAVA);
+            let Percentage = Total_sum * 100 / 350;
+            var fix_value = Percentage.toFixed(2);
+            document.getElementById('Sum_total').innerHTML = Total_sum;
+            document.getElementById('Percentages').innerHTML = (fix_value + "%");
+        }
+    </script>
+</body>
+
+</html>
